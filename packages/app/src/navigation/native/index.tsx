@@ -16,6 +16,10 @@ const Stack = createNativeStackNavigator<RootStackParamList>()
  * Sets up the Native Navigation Routes
  */
 export function NativeNavigation() {
+  /// The `name` properties in Stack.Screen has to match the key name in the LinkingConfig
+  // TODO: create a constant or enum or something so we don't have to hardcode the screen name twice
+  // - this file
+  // - alchemyNavigationContainer.tsx
   return (
     <Stack.Navigator>
       <Stack.Screen

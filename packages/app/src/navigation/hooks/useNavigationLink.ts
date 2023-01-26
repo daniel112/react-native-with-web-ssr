@@ -8,6 +8,7 @@ type useNavigationLinkProps = {
 
 export const useNavigationLink = (props: useNavigationLinkProps) => {
   const href = props.dynamicParam ? `/${props.route}/${props.dynamicParam}` : `/${props.route}`
+  console.log({ href })
   return useLink({
     href,
   })

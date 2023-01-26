@@ -1,4 +1,5 @@
 import { NavigationContainer, DarkTheme, DefaultTheme } from '@react-navigation/native'
+import { AppRoutes } from 'app/src/navigation/AppRoutes'
 import * as Linking from 'expo-linking'
 import { useMemo } from 'react'
 import { useColorScheme } from 'react-native'
@@ -14,9 +15,9 @@ export function AlchemyNavigationContainer({ children }: { children: React.React
           config: {
             initialRouteName: 'home',
             screens: {
-              home: '',
-              feedbackList: 'feedbacks',
-              feedbackDetails: 'feedbacks/:id',
+              home: AppRoutes.Home,
+              feedbackList: AppRoutes.Feedbacks,
+              feedbackDetails: `${AppRoutes.FeedbackDetails}/:id`,
             },
           },
         }),
