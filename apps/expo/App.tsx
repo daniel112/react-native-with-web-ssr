@@ -1,7 +1,7 @@
 import 'expo-dev-client'
 import React from 'react'
 import { NativeNavigation } from 'app/src/navigation/native'
-import { Provider } from 'app/src/provider'
+import { RootProvider } from 'app/src/provider/RootProvider'
 import { useFonts } from 'expo-font'
 
 export default function App() {
@@ -15,8 +15,8 @@ export default function App() {
   }
 
   return (
-    <Provider>
+    <RootProvider>
       <NativeNavigation />
-    </Provider>
+    </RootProvider>
   )
 }

@@ -1,12 +1,11 @@
 import { Anchor, Button, H1, Input, Paragraph, Separator, Sheet, XStack, YStack } from 'tamagui'
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
 import React, { useState } from 'react'
-import { useLink } from 'solito/link'
+import { useNavigationLink } from 'app/src/navigation/hooks/useNavigationLink'
+import { AppRoutes } from 'app/src/navigation/AppRoutes'
 
 export function HomeScreen() {
-  const linkProps = useLink({
-    href: '/feedbacks/123',
-  })
+  const linkProps = useNavigationLink({ route: AppRoutes.FeedbackDetails, dynamicParam: '123' })
 
   return (
     <YStack f={1} jc="center" ai="center" p="$4" space>

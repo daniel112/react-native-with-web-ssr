@@ -1,2 +1,2 @@
-export * from './detailScreen'
-export * from './listScreen'
+export * from './FeedbackDetailsScreen'
+export * from './FeedbackListScreen'

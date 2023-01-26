@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-import { HomeScreen } from '../../features/home/screen'
+import { HomeScreen } from '../../features/home/HomeScreen'
 import { FeedbackDetailsScreen, FeedbackListScreen } from '../../features/feedbacks'
 
 type RootStackParamList = {
@@ -12,6 +12,9 @@ type RootStackParamList = {
 }
 const Stack = createNativeStackNavigator<RootStackParamList>()
 
+/**
+ * Sets up the Native Navigation Routes
+ */
 export function NativeNavigation() {
   return (
     <Stack.Navigator>
