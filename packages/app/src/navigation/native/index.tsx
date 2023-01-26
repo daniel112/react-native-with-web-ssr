@@ -1,14 +1,16 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import { HomeScreen } from '../../features/home/screen'
-import { UserDetailScreen } from '../../features/user/detail-screen'
+import { FeedbackDetailsScreen, FeedbackListScreen } from '../../features/feedbacks'
 
-const Stack = createNativeStackNavigator<{
+type RootStackParamList = {
   home: undefined
-  'user-detail': {
+  feedbackDetails: {
     id: string
   }
-}>()
+  feedbackList: undefined
+}
+const Stack = createNativeStackNavigator<RootStackParamList>()
 
 export function NativeNavigation() {
   return (
@@ -21,10 +23,17 @@ export function NativeNavigation() {
         }}
       />
       <Stack.Screen
-        name="user-detail"
-        component={UserDetailScreen}
+        name="feedbackDetails"
+        component={FeedbackDetailsScreen}
         options={{
-          title: 'User',
+          title: 'Feedback Details',
+        }}
+      />
+      <Stack.Screen
+        name="feedbackList"
+        component={FeedbackListScreen}
+        options={{
+          title: 'Feedbacks',
         }}
       />
     </Stack.Navigator>

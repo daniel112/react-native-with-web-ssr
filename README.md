@@ -1,14 +1,8 @@
 # Tamagui + Solito + Next + Expo Monorepo
 
-```sh
-npm create tamagui
-```
-
 ## 🔦 About
 
 This monorepo is a starter for an Expo + Next.js + Tamagui + Solito app.
-
-Many thanks to [@FernandoTheRojo](https://twitter.com/fernandotherojo) for the Solito starter monorepo which this was forked from. Check out his [talk about using expo + next together at Next.js Conf 2021](https://www.youtube.com/watch?v=0lnbdRweJtA).
 
 ## 📦 Included packages
 
@@ -45,7 +39,6 @@ To run with optimizer on in dev mode (just for testing, it's faster to leave it 
 To see debug output to verify the compiler, add `// debug` as a comment to the top of any file.
 
 - Expo local dev: `yarn native`
-
 
 ## Developing
 
@@ -102,3 +95,21 @@ withTM([
 - Install command to be `yarn set version berry && yarn install`
 - Build command: leave default setting
 - Output dir: leave default setting
+
+## NOTES
+
+### Adding new Route/Screen
+
+1. Creating the Shared Screen
+
+- Create the Screen in `/packages/app/src/features/<newFeature>`
+
+2. For Web
+
+- Ensure new page exists under `/apps/next/pages/*`
+- import the Screen from step 1
+
+3. For Native Mobile
+
+- Update the React-Navigation Linking config
+- Update the React-Navigation Screen stack in `/packages/app/src/navigation/native/index.ts`

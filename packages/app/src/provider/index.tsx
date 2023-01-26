@@ -1,5 +1,6 @@
 import config from '../../tamagui.config'
-import { NavigationProvider } from './navigation'
+import { AlchemyNavigationContainer } from '../navigation/alchemyNavigationContainer'
+
 import { TamaguiProvider, TamaguiProviderProps } from 'tamagui'
 import { useColorScheme } from 'react-native'
 
@@ -12,7 +13,7 @@ export function Provider({ children, ...rest }: Omit<TamaguiProviderProps, 'conf
       defaultTheme={scheme === 'dark' ? 'dark' : 'light'}
       {...rest}
     >
-      <NavigationProvider>{children}</NavigationProvider>
+      <AlchemyNavigationContainer>{children}</AlchemyNavigationContainer>
     </TamaguiProvider>
   )
 }

@@ -3,7 +3,7 @@ import * as Linking from 'expo-linking'
 import { useMemo } from 'react'
 import { useColorScheme } from 'react-native'
 
-export function NavigationProvider({ children }: { children: React.ReactNode }) {
+export function AlchemyNavigationContainer({ children }: { children: React.ReactNode }) {
   const scheme = useColorScheme()
   return (
     <NavigationContainer
@@ -15,7 +15,8 @@ export function NavigationProvider({ children }: { children: React.ReactNode }) 
             initialRouteName: 'home',
             screens: {
               home: '',
-              'user-detail': 'user/:id',
+              feedbackList: 'feedbacks',
+              feedbackDetails: 'feedbacks/:id',
             },
           },
         }),
