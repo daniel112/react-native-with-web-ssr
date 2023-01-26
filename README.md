@@ -1,8 +1,8 @@
-# Tamagui + Solito + Next + Expo Monorepo
+# Alchemy
 
 ## 🔦 About
 
-This monorepo is a starter for an Expo + Next.js + Tamagui + Solito app.
+Monorepo for Native mobile and SSR WebApp. Uses Expo + Next.js + Tamagui + Solito app.
 
 ## 📦 Included packages
 
@@ -20,7 +20,6 @@ The main apps are:
 - `next` (web)
 
 - `packages` shared packages across apps
-  - `ui` includes your custom UI kit that will be optimized by Tamagui
   - `app` you'll be importing most files from `app/`
     - `features` (don't use a `screens` folder. organize by feature.)
     - `provider` (all the providers that wrap the app, and some no-ops for Web.)
@@ -39,16 +38,6 @@ To run with optimizer on in dev mode (just for testing, it's faster to leave it 
 To see debug output to verify the compiler, add `// debug` as a comment to the top of any file.
 
 - Expo local dev: `yarn native`
-
-## Developing
-
-We've added `packages/ui` to show an example of [building your own design system](https://tamagui.dev/docs/guides/design-systems).
-
-## UI Kit
-
-Note we're following the [design systems guide](https://tamagui.dev/docs/guides/design-systems) and creating our own package for components.
-
-See `packages/ui` named `@my/ui` for how this works.
 
 ## 🆕 Add new dependencies
 
@@ -88,13 +77,6 @@ withTM([
   'expo-crypto', // <-- add this or any other native module
 ])
 ```
-
-### Deploying to Vercel
-
-- Root: `./apps/next`
-- Install command to be `yarn set version berry && yarn install`
-- Build command: leave default setting
-- Output dir: leave default setting
 
 ## NOTES
 
