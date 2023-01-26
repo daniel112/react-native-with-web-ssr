@@ -1,4 +1,4 @@
-import { Anchor, Button, H1, Input, Paragraph, Separator, Sheet, XStack, YStack } from '@my/ui'
+import { Anchor, Button, H1, Input, Paragraph, Separator, Sheet, XStack, YStack } from 'tamagui'
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
 import React, { useState } from 'react'
 import { useLink } from 'solito/link'
