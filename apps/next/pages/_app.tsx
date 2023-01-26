@@ -13,8 +13,8 @@ function MyApp({ Component, pageProps }: SolitoAppProps) {
   return (
     <>
       <Head>
-        <title>Tamagui Example App</title>
-        <meta name="description" content="Tamagui, Solito, Expo & Next.js" />
+        <title>Alchemy</title>
+        <meta name="description" content="Neudesic Alchemy App" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider>
